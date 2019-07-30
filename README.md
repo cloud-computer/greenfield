@@ -2,13 +2,16 @@
 ### The in-browser wayland compositor [![Build Status](https://travis-ci.org/udevbe/greenfield.svg)](https://travis-ci.org/udevbe/greenfield)
 
 Greenfield is a [Wayland compositor](https://en.wikipedia.org/wiki/Wayland_%28display_server_protocol%29) written entirely
-in JavaScript while utilizing WebAssembly for the performance critical parts. It can run native Wayland 
+in JavaScript while utilizing WebAssembly for the performance critical parts. It can run native Wayland
 applications remotely or it can run Wayland [web applications](https://preview.greenfield.app) directly in your browser.
 
 No plugins required.
 
 For more information, visit the [documentation](https://docs.greenfield.app) page.
 
+### Getting Started
+
+Run `docker-compose up` and navigate to `http://localhost:8080`.
 
 ### Media
 Fosdem presentation + demo (2 Feb 2019):

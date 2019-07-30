@@ -1,0 +1,19 @@
+version: '2.3'
+
+services:
+
+  app-endpoint-server:
+    build:
+      context: .
+      dockerfile: Dockerfile.app-endpoint-server
+    ports:
+      - 8081:8081
+    restart: always
+
+  compositor:
+    build:
+      context: .
+      dockerfile: Dockerfile.compositor
+    ports:
+      - 8080:8080
+    restart: always
