@@ -7,7 +7,7 @@
       protocol: 'ws:',
       // Hostname argument.
       // See https://nodejs.org/api/net.html#net_server_listen_port_host_backlog_callback for details
-      hostname: 'localhost',
+      hostname: '0.0.0.0',
       // Port argument.
       // See https://nodejs.org/api/net.html#net_server_listen_port_host_backlog_callback for details
       port: 8081,
@@ -43,7 +43,7 @@
     apps: {
       'remote-gtk3-demo': {
         // The full path of the executable binary. Can also be a symlink.
-        bin: "/usr/bin/gtk3-demo",
+        bin: "gnumeric",
         // Arguments passed to the binary
         args: [],
       }
