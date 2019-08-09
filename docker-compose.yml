@@ -1,19 +1,33 @@
-version: '2.3'
+version: "3.3"
 
 services:
 
   app-endpoint-server:
     build:
       context: .
-      dockerfile: Dockerfile.app-endpoint-server
+      dockerfile: app-endpoint-server.dockerfile
+    restart: always
     ports:
       - 8081:8081
-    restart: always
+    volumes:
+      - x11temp:/tmp/.X11-unix
+    environment:
+      DISPLAY: ':0'
+      XDG_RUNTIME_DIR: '/tmp'
 
   compositor:
     build:
       context: .
-      dockerfile: Dockerfile.compositor
+      dockerfile: compositor.dockerfile
     ports:
       - 8080:8080
     restart: always
+
+  xdummy:
+    build:
+      context: .
+      dockerfile: xdummy.dockerfile
+    volumes:
+      - x11temp:/tmp/.X11-unix
+volumes:
+  x11temp:
